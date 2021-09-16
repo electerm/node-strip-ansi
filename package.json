@@ -6,10 +6,10 @@
   "module": "src/strip-ansi.ts",
   "types": "dist/strip-ansi",
   "scripts": {
-    "test": "standard && jest --coverage",
+    "test": "npm run release && standard && jest --coverage",
     "release": "rm -rf dist && webpack --progress --config webpack.config.babel.js",
     "prepublishOnly": "npm run release",
-    "coveralls": "npm run release && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "repository": {
     "type": "git",
